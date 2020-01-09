@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:titleTextColor="@color/colorAccent"
+    android:layout_alignParentTop="true"
+    android:showDividers="middle"
+    android:layout_marginBottom="30dp"
+
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/signupback"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:background="@drawable/ic_arrow_back_black_24dp"/>
+
+        <TextView
+            android:layout_toRightOf= "@id/signupback"
+            android:id="@+id/toolbarhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Account"
+            android:textColor="#000"
+            android:layout_marginLeft="15dp"
+            android:textSize="20dp"
+            />
+
+
+    </RelativeLayout>
+
+</androidx.appcompat.widget.Toolbar>

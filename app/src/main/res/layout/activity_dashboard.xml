@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DashboardActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/facebook"
+            android:scaleType="fitStart"
+
+            />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:paddingRight="6dp"
+            android:layout_weight="3"
+            android:src="@drawable/dashsearch"
+            />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:paddingRight="6dp"
+            android:layout_weight="3"
+            android:src="@drawable/messenger"
+            />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:paddingRight="6dp"
+            android:layout_weight="3"
+            android:src="@drawable/logout"
+            android:id="@+id/logout"
+            />
+    </LinearLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        app:menu="@menu/bottom_nav_menu" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#A5A5A5"
+        android:layout_marginTop="5dp"
+         />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:id="@+id/profilepic"
+           />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/posttxt"
+            android:layout_toRightOf="@+id/profilepic"
+            android:hint="Whats on your mind"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:visibility="gone"
+            android:src="@drawable/login"
+            android:layout_toRightOf="@+id/profilepic"
+            android:layout_below="@+id/posttxt"
+            android:id="@+id/imgpreview"
+            />
+
+       <Button
+           android:layout_width="100dp"
+           android:layout_height="wrap_content"
+           android:text="Image"
+           android:id="@+id/imgbtn"
+           android:layout_below="@+id/imgpreview"
+           android:layout_toRightOf="@+id/profilepic"
+           />
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="upload"
+            android:id="@+id/upload"
+            android:layout_below="@+id/imgpreview"
+            android:layout_toRightOf="@+id/imgbtn"
+            />
+    </RelativeLayout>
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="No Posts Found"
+    android:textSize="40dp"
+    android:textAlignment="center"
+    android:id="@+id/noposts"
+    android:visibility="gone"
+    android:layout_marginTop="50dp"
+    />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/postsview"
+        android:layout_marginTop="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    />
+</LinearLayout>
+

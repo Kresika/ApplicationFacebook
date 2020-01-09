@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:layout_marginTop="20dp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/postprofilepic"
+            android:src="@mipmap/ic_launcher"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:layout_toRightOf="@+id/postprofilepic"
+            android:paddingLeft="10dp"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:id="@+id/username"
+            android:textSize="20dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2 hrs"
+            android:layout_toRightOf="@+id/postprofilepic"
+            android:layout_below="@+id/username"
+            android:paddingLeft="10dp"
+            android:textColor="#000"
+            android:textStyle="italic"
+            android:id="@+id/posttime"
+
+            android:textSize="14dp"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Caption"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="#000"
+        android:id="@+id/caption"
+        android:textSize="17dp"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:id="@+id/postimg"
+        android:scaleType="centerCrop"
+        android:src="@drawable/login"
+        />
+
+
+</LinearLayout>
